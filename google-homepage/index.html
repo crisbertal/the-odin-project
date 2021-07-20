@@ -9,10 +9,50 @@
 
 <body>
     <style>
-        /* Recuerda ponerle paddin */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: #222;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Recuerda ponerle padding */
         nav {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 6px;
+        }
+
+        .container-tienda {
+            padding: 5px;
+        }
+
+        .container-tienda:first-of-type {
+            margin-left: 5px;
+        }
+
+        /* Hay que hacer un reajuste de padding */
+        .link-tienda {
+            margin: 0 5px;
+            padding: 5px;
         }
 
         main {
@@ -70,8 +110,8 @@
 
     <nav>
         <div class="container-tienda">
-            <a href="#">Sobre Google</a>
-            <a href="#">Tienda</a>
+            <a class="link-tienda" href="#">Sobre Google</a>
+            <a class="link-tienda" href="#">Tienda</a>
         </div>
         <div class="container-gmail">
             <a href="#">Gmail</a>
