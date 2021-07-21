@@ -4,121 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
     <title>Google Homepage</title>
 </head>
 
 <body>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        a {
-            color: #222;
-        }
-
-        a:link {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        body {
-            font-family: arial, sans-serif;
-            font-size: 14px;
-        }
-
-        /* Recuerda ponerle padding */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 60px;
-            padding: 6px;
-        }
-
-        .container-tienda {
-            padding: 5px;
-        }
-
-        .container-tienda:first-of-type {
-            margin-left: 5px;
-        }
-
-        /* Hay que hacer un reajuste de padding */
-        .link-tienda {
-            margin: 0 5px;
-            padding: 5px;
-        }
-
-        main {
-            width: 100%;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            width: fit-content;
-            margin: auto;
-        }
-
-        .search-buttons {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-        }
-
-        .searchbar {
-            margin: auto;
-        }
-
-        #google {
-            height: 92px;
-            width: 272px;
-            margin: auto;
-        }
-
-        footer {
-            position: absolute;
-            height: auto;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .footer-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .footer-left {
-            position: absolute;
-            left: 0px;
-        }
-
-        .footer-right {
-            position: absolute;
-            right: 0px;
-        }
-    </style>
-
     <nav>
         <div class="container-tienda">
             <a class="link-tienda" href="#">Sobre Google</a>
             <a class="link-tienda" href="#">Tienda</a>
         </div>
         <div class="container-gmail">
-            <a href="#">Gmail</a>
-            <a href="#">Imagenes</a>
+            <div class="container-gmail-text">
+                <a href="#" class="gmail-item">Gmail</a>
+                <a href="#" class="gmail-item">Imágenes</a>
+            </div>
             <!-- Dejar para mas tarde y aplicar estilos -->
-            <a href="#" id="menu">Icon</a>
-            <a href="#" id="profile">Icon</a>
+            <div class="container-gmail-buttons">
+                <a href="#" class="gmail-button-menu">
+                    <i class="material-icons">
+                        apps
+                    </i></a>
+                <a href="#" class="gmail-button-profile">
+                    <img src="person.jpg" alt="profile image">
+                </a>
+            </div>
         </div>
     </nav>
     <main>

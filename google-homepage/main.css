@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #222;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Recuerda ponerle padding */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 6px;
+}
+
+.container-tienda {
+    display: flex;
+    margin-left: 10px;
+}
+
+.link-tienda {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.container-gmail {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.container-gmail-text {
+    margin-right: 15px;
+}
+
+.container-gmail-text .gmail-item {
+    padding: 5px;
+}
+
+.container-gmail-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.gmail-button-menu {
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+.gmail-button-menu:hover {
+    background-color: #F0F0F0;
+}
+
+.gmail-button-profile {
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.gmail-button-profile:hover {
+    background-color: #F0F0F0;
+}
+
+.gmail-button-profile img {
+    vertical-align: middle;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.material-icons {
+    vertical-align: middle;
+    color: #717479;
+}
+
+main {
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.searchbar {
+    margin: auto;
+}
+
+#google {
+    height: 92px;
+    width: 272px;
+    margin: auto;
+}
+
+footer {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left {
+    position: absolute;
+    left: 0px;
+}
+
+.footer-right {
+    position: absolute;
+    right: 0px;
+}
