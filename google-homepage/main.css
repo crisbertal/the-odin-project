@@ -121,6 +121,11 @@ main {
     justify-content: space-between;
 }
 
+.searchbar:hover {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223,225,229,0);
+}
+
 input {
     border: none;
     outline: none;
@@ -133,7 +138,8 @@ input {
 
 #search-icon {
     margin-right: 12px;
-    margin-left: 18px
+    margin-left: 18px;
+    font-size: 20px;
 }
 
 #mic-icon {
@@ -145,6 +151,7 @@ input {
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-top: 18px;
 }
 
 footer {
