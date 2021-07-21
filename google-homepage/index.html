@@ -23,7 +23,6 @@
                 <a href="#" class="gmail-item">Gmail</a>
                 <a href="#" class="gmail-item">Imágenes</a>
             </div>
-            <!-- Dejar para mas tarde y aplicar estilos -->
             <div class="container-gmail-buttons">
                 <a href="#" class="gmail-button-menu">
                     <i class="material-icons">
@@ -35,15 +34,24 @@
             </div>
         </div>
     </nav>
+
     <main>
         <div class="main-container">
             <img id="google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
                 alt="Google icon">
             <!-- Tiene 3 elementos lupa, barra y micro -->
             <div class="searchbar">
-                <a href="#">Lupa</a>
-                <input type="text">
-                <a href="#">Micro</a>
+                <a href="#">
+                    <span class="material-icons" id="search-icon">
+                        search
+                    </span>
+                </a>
+                <input type="text" placeholder="Buscar en Google o escribir una URL">
+                <a href="#">
+                    <span class="material-icons" id="mic-icon">
+                        mic
+                    </span>
+                </a>
             </div>
             <div class="search-buttons">
                 <button>Buscar con Google</button>
@@ -54,6 +62,7 @@
 
         </div>
     </main>
+
     <footer>
         <p>España</p>
         <hr>
