@@ -104,8 +104,7 @@ main {
 #google {
     height: 92px;
     width: 272px;
-    margin: auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 .searchbar {
@@ -190,24 +189,47 @@ button:focus {
 }
 
 footer {
+    background-color: #f2f2f2;
     position: absolute;
     height: auto;
     width: 100%;
     bottom: 0;
 }
 
+footer > p {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+}
+
+
 .footer-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+footer img {
+    height: 14px;
+    margin-right: 6px;
+}
+
+footer a {
+    color: #70757a;
+    padding: 0 15px;
+}
+
+/* Para que la imagen se quede pegada */
+#emision {
+    padding: 0;
 }
 
 .footer-left {
-    position: absolute;
-    left: 0px;
+    justify-content: flex-start;
 }
 
 .footer-right {
-    position: absolute;
-    right: 0px;
+    justify-content: flex-end;
 }
