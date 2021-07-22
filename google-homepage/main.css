@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-a {
-    color: #222;
-}
-
 a:link {
     text-decoration: none;
 }
@@ -37,6 +33,7 @@ nav {
 .link-tienda {
     margin: 0 5px;
     padding: 5px;
+    color: #222;
 }
 
 .container-gmail {
@@ -51,6 +48,7 @@ nav {
 
 .container-gmail-text .gmail-item {
     padding: 5px;
+    color: #222;
 }
 
 .container-gmail-buttons {
@@ -177,6 +175,18 @@ button:hover {
 button:focus {
     border: 1px solid #4285f4;
     outline: none;
+}
+
+.languages {
+    color: #3c4043;
+    display: flex;
+    justify-content: center;
+    line-height: 28px;
+    font-size: small;
+}
+
+.languages a {
+    padding: 0 6px;
 }
 
 footer {
