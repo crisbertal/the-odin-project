@@ -21,21 +21,19 @@ const playRound = (playerSelection, computerSelection) => {
     if (VALUES.indexOf(player) === VALUES.indexOf(computer)) {
         return `Draw of ${player}`;
     }
-
-    // if there's a rock in game
-    if (VALUES.indexOf(player) === 2 || VALUES.indexOf(computer) === 2) {
-        // 0 must win
-        if (VALUES.indexOf(player) === 0)
-            return playerWin(player, computer);
-        else if (VALUES.indexOf(computer) === 0)
-            return computerWin(player, computer);
-    }
-
-    // the higher value in the array wins
-    if (VALUES.indexOf(player) > VALUES.indexOf(computer))
+    // if player wins
+    else if
+        (
+        player === "rock" && computer === "scissors" ||
+        player === "paper" && computer === "rock" ||
+        player === "scissors" && computer === "paper"
+    ) {
         return playerWin(player, computer);
-    else
+    }
+    // else, the computer wins
+    else {
         return computerWin(player, computer);
+    }
 }
 
 const playerWin = (player, computer) => {
