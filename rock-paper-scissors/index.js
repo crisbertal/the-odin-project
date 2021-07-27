@@ -47,25 +47,36 @@ const computerWin = (player, computer) => {
 }
 
 /*
-MAIN 
+UI Handlers
 */
-// 5 rounds saving the score
-for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("Your turn. Write rock, paper or scissors");
-    console.log(playRound(playerSelection, computerPlay()));
-    console.log(`Player score: ${playerScore} | Computer Score: ${computerScore}`);
+const playerScoreText = document.querySelector(".player-score");
+const computerScoreText = document.querySelector(".computer-score");
+const resultText = document.querySelector("#result");
+const buttons = document.querySelectorAll("button");
+
+const playGame = (e) => {
+    //if the max score is reached, stop playing
+    if (computerScore === 5 || playerScore === 5) return;
+    else {
+        //else, play the game
+        resultText.textContent = playRound(e.target.textContent, computerPlay());
+        playerScoreText.textContent = `Player - ${playerScore}`;
+        computerScoreText.textContent = `Computer - ${computerScore}`;
+
+        //show the final score after playing
+        if (computerScore === 5 || playerScore === 5) {
+            //show result
+            resultText.textContent = playerScore === 5 ? "You win the game!" : "You loose the game!";
+        }
+    }
 }
 
-// in 5 rounds there's no tie
-if (playerScore > computerScore) {
-    console.log("You won the match!");
-}
-else
-    console.log("You lost the match!");
+buttons.forEach((button) => button.addEventListener("click", playGame));
 
 /*
 UNIT TESTING
 */
+
 /*
 // draw
 console.log(playRound("rock", "rock"));
