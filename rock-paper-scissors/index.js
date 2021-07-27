@@ -51,6 +51,8 @@ UI Handlers
 */
 const playerScoreText = document.querySelector(".player-score");
 const computerScoreText = document.querySelector(".computer-score");
+const playerSelectionText = document.querySelector("#player-selection");
+const computerSelectionText = document.querySelector("#computer-selection");
 const resultText = document.querySelector("#result");
 const buttons = document.querySelectorAll("button");
 
@@ -59,14 +61,18 @@ const playGame = (e) => {
     if (computerScore === 5 || playerScore === 5) return;
     else {
         //else, play the game
-        resultText.textContent = playRound(e.target.textContent, computerPlay());
-        playerScoreText.textContent = `Player - ${playerScore}`;
-        computerScoreText.textContent = `Computer - ${computerScore}`;
+        let computerSelection = computerPlay();
+        let playerSelection = e.target.textContent;
+        computerSelectionText.textContent = computerSelection.toUpperCase();
+        playerSelectionText.textContent = playerSelection.toUpperCase();
+        resultText.textContent = playRound(playerSelection, computerSelection);
+        playerScoreText.textContent = playerScore;
+        computerScoreText.textContent = computerScore;
 
         //show the final score after playing
         if (computerScore === 5 || playerScore === 5) {
             //show result
-            resultText.textContent = playerScore === 5 ? "You win the game!" : "You loose the game!";
+            resultText.textContent = playerScore === 5 ? "You win the game!" : "You lose the game!";
         }
     }
 }
